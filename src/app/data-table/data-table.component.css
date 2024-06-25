@@ -1,0 +1,20 @@
+h2{
+    color: #ffffff;
+}
+
+table{
+    border: 3px solid rgb(4, 4, 43);
+    font-size: clamp(16px,2vw,30px);
+    width: 100%;
+}
+
+th{
+    background: rgb(149, 172, 249);
+    width: 25%;
+}
+
+td{
+    color: rgb(253, 147, 253);
+    background: rgba(58, 2, 65, 0.4);
+    width: 25%;
+}

@@ -1,0 +1,24 @@
+<h2>Vamos a ver si mi tabla trae los datos de la API.<br>(Dar click en alguna fila de los Id.)</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id.</th>
+            <th>Name.</th>
+            <th>Username.</th>
+            <th>Email.</th>
+        </tr>
+    </thead>
+<tbody>
+    <ng-container *ngFor = "let data of datas">
+        <tr (click)="seleccionarUsuario(data)">
+            <td>{{data.id}}</td>
+            <td *ngIf="usuarioSeleccionado && usuarioSeleccionado.id === data.id">{{data.name}}</td>
+            <td *ngIf="usuarioSeleccionado && usuarioSeleccionado.id === data.id">{{data.username}}</td>
+            <td *ngIf="usuarioSeleccionado && usuarioSeleccionado.id === data.id">{{data.email}}</td>
+        </tr>
+    </ng-container>
+</tbody>
+</table>
+
+<app-user-detail [user]="usuarioSeleccionado"></app-user-detail>
